@@ -49,9 +49,13 @@ Your task is to containerize this existing application using Docker. You need to
 ```bash
 
 ```
+docker build -t docker-assignment-4 .
+
+docker run -d --name docker-assignment-container -p 3000:3000 docker-assignment-4
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
+Docker containers share the host operating system, while virtual machines include a complete operating system. This makes containers smaller, faster to start, and less demanding on computer resources. A development team may choose Docker because it packages the application, Node.js runtime, and dependencies together, allowing the application to run consistently on different computers. For a lightweight web application like this one, Docker is faster and easier to deploy than a virtual machine.
 
 
 
